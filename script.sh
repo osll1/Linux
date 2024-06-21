@@ -41,7 +41,6 @@ is_fibonacci() {
 }
 
 # Prompt the user to enter a number
-#read -p "Enter a number: " user_input
 user_input=$1
 
 # Check if the input is a positive integer
