@@ -1,5 +1,3 @@
-
-
 pipeline {
     agent any
 
@@ -8,7 +6,7 @@ pipeline {
     }
 
     environment {
-        OUTPUT_FILE = 'output.html'
+        OUTPUT_FILE = 'palindrome_result.html'
     }
 
     stages {
@@ -21,28 +19,8 @@ pipeline {
         stage('Run Shell Script') {
             steps {
                 script {
-                    def output = sh(script: """
-                        #!/bin/bash
-
-                        # Function to check if a string is a palindrome
-                        is_palindrome() {
-                            local input="\$1"
-                            local reversed_input=\$(echo "\$input" | rev)
-                            if [[ "\$input" == "\$reversed_input" ]]; then
-                                echo "The string '\$input' is a palindrome."
-                            else
-                                echo "The string '\$input' is not a palindrome."
-                            fi
-                        }
-
-                        # Input string from Jenkins parameter
-                        input_string="${params.user_input}"
-
-                        # Check if the string is a palindrome
-                        is_palindrome "\$input_string"
-                    """, returnStdout: true).trim()
-                    
-                    writeFile file: OUTPUT_FILE, text: "<html><body><h1>Palindrome Check Result</h1><p>${output}</p></body></html>"
+                    def output = sh(script: "bash palindrome_check.sh '${params.user_input}'", returnStdout: true).trim()
+                    echo output // This line outputs the result to the Jenkins console
                 }
             }
         }
@@ -83,6 +61,7 @@ pipeline {
         }
     }
 }
+
 
 
 // pipeline {
