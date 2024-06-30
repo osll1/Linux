@@ -1,4 +1,5 @@
 Palindrome Checker Script
+###########################################################################################################
 This script (script.sh) checks whether a given input string is a palindrome. It includes validation to ensure the input is a string and not numeric.
 
 Usage
