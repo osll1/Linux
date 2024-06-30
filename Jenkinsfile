@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/TomerNachman/WorkDevops.git'  
+                git 'https://github.com/osll1/Linux.git'  
             }
         }
 
