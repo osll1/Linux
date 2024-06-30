@@ -12,7 +12,7 @@ is_palindrome() {
 }
 
 # Input string (you can modify this part to accept input from Jenkins parameters)
-input_string="madam"
+input_string="$1"
 
 # Check if the string is a palindrome
 result=$(is_palindrome "$input_string")
