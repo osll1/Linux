@@ -35,7 +35,7 @@ bash script.sh <input_string>
 Replace <input_string> with the string you want to check.
 
 
-**Examples**
+### Examples
 
 **valid-input-palindrome**
 # Examples 1
