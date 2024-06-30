@@ -28,11 +28,16 @@ This script (`script.sh`) checks whether a given input string is a palindrome. I
    ```bash
    git clone https://github.com/osll1/Linux.git
    cd Linux
-2. # Run the Script:
+   
+2. **Run the Script:**
 
 bash script.sh <input_string>
 Replace <input_string> with the string you want to check.
 
+
+**Examples**
+
+**valid-input-palindrome**
 # Examples 1
 Valid Input (Palindrome)
 bash script.sh "madam"
@@ -41,6 +46,7 @@ bash script.sh "madam"
 The string 'madam' is a palindrome.
 
 # Examples 2
+**invalid-input-numeric**
 Invalid Input (Numeric)
 bash script.sh "12321"
 
@@ -48,7 +54,7 @@ bash script.sh "12321"
 Error: Numeric input detected. Please enter a string.
 
 
- # Script Details
+**Script Details**
 The script.sh script:
 Accepts a string input from the command line.
 Checks if the input is empty or numeric.
