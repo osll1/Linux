@@ -11,7 +11,7 @@ is_palindrome() {
     fi
 }
 
-# Input string (you can modify this part to accept input from Jenkins parameters)
+# Input string from Jenkins parameter
 input_string="$1"
 
 # Check if the string is a palindrome
@@ -46,6 +46,7 @@ html_content="
 # Output the HTML content to a file
 output_file="palindrome_result.html"
 echo "$html_content" > "$output_file"
+
 
 
 
