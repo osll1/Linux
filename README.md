@@ -1,47 +1,48 @@
-Palindrome Checker Script
-This script (script.sh) checks whether a given input string is a palindrome. It includes validation to ensure the input is a string and not numeric.
+סקריפט לבדיקת פלינדרום
+סקריפט זה (script.sh) בודק אם מחרוזת הקלט שניתנת היא פלינדרום. הסקריפט כולל אימות לוודא שהקלט הוא מחרוזת ולא מספר.
 
-Usage
-Requirements
+שימוש
+דרישות
 Bash (Bourne Again SHell)
-Git (for cloning the repository)
-Instructions
-Clone the Repository:
+Git (לשם הורדת המאגר)
+הוראות
+הורדת המאגר:
 
 bash
 Copy code
 git clone https://github.com/osll1/Linux.git
 cd Linux
-Run the Script:
+הרצת הסקריפט:
 
 bash
 Copy code
-bash script.sh <input_string>
-Replace <input_string> with the string you want to check.
+bash script.sh <מחרוזת_קלט>
+החלף <מחרוזת_קלט> במחרוזת שברצונך לבדוק.
 
-Examples
-Valid Input (Palindrome)
+דוגמאות
+קלט חוקי (פלינדרום)
 bash
 Copy code
-bash script.sh "madam"
-Output:
+bash script.sh "שלום"
+פלט:
 
-csharp
+arduino
 Copy code
-The string 'madam' is a palindrome.
-Invalid Input (Numeric)
+המחרוזת 'שלום' אינה פלינדרום.
+קלט לא חוקי (מספרי)
 bash
 Copy code
 bash script.sh "12321"
-Output:
+פלט:
 
-lua
+makefile
 Copy code
-Error: Numeric input detected. Please enter a string.
-Script Details
-The script.sh script:
+שגיאה: זוהתה קלט מספרי. יש להזין מחרוזת.
+פרטי הסקריפט
+הסקריפט script.sh:
 
-Accepts a string input from the command line.
-Checks if the input is empty or numeric.
-Determines if the input string reads the same forwards and backwards (a palindrome).
-Outputs the result as text and generates an HTML file (palindrome_result.html) with the result.
+מקבל קלט מחרוזת מהשורת פקודה.
+בודק אם הקלט ריק או מספרי.
+מגדיר אם המחרוזת קוראת אותו הדבר בכיוון קדימה ואחורה (פלינדרום).
+מדפיס את התוצאה כטקסט ויוצר קובץ HTML (palindrome_result.html) עם התוצאה.
+
