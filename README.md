@@ -1,18 +1,33 @@
-Palindrome Checker Script
-###########################################################################################################
-This script (script.sh) checks whether a given input string is a palindrome. It includes validation to ensure the input is a string and not numeric.
+# Palindrome Checker Script
 
-Usage
-Requirements
-Bash (Bourne Again SHell)
-Git (for cloning the repository)
-Instructions
-Clone the Repository:
+This script (`script.sh`) checks whether a given input string is a palindrome. It includes validation to ensure the input is a string and not numeric.
 
-bash
-Copy code
-git clone https://github.com/osll1/Linux.git
-cd Linux
+## Table of Contents
+
+- [Usage](#usage)
+  - [Requirements](#requirements)
+  - [Instructions](#instructions)
+- [Examples](#examples)
+  - [Valid Input](#valid-input-palindrome)
+  - [Invalid Input](#invalid-input-numeric)
+- [Script Details](#script-details)
+
+---
+
+## Usage
+
+### Requirements
+
+- Bash (Bourne Again SHell)
+- Git (for cloning the repository)
+
+### Instructions
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/osll1/Linux.git
+   cd Linux
 Run the Script:
 
 bash
@@ -29,7 +44,7 @@ Output:
 
 csharp
 Copy code
-The string 'madam' is not a palindrome.
+The string 'madam' is a palindrome.
 Invalid Input (Numeric)
 bash
 Copy code
