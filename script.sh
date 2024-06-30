@@ -5,27 +5,20 @@ is_palindrome() {
     local input="$1"
     local reversed_input=$(echo "$input" | rev)
     if [[ "$input" == "$reversed_input" ]]; then
-        echo "true"
+        echo "The string '$input' is a palindrome."
     else
-        echo "false"
+        echo "The string '$input' is not a palindrome."
     fi
 }
 
-# Input string from Jenkins parameter
+# Input string from the command line argument
 input_string="$1"
 
 # Check if the string is a palindrome
 result=$(is_palindrome "$input_string")
 
-# Generate the appropriate message
-if [[ "$result" == "true" ]]; then
-    message="The string '$input_string' is a palindrome."
-else
-    message="The string '$input_string' is not a palindrome."
-fi
-
-# Output the result to the Jenkins console
-echo "$message"
+# Output the result to the console
+echo "$result"
 
 # Generate HTML content
 html_content="
@@ -38,7 +31,7 @@ html_content="
 </head>
 <body>
     <h1>Palindrome Check Result</h1>
-    <p>$message</p>
+    <p>$result</p>
 </body>
 </html>
 "
@@ -46,6 +39,7 @@ html_content="
 # Output the HTML content to a file
 output_file="palindrome_result.html"
 echo "$html_content" > "$output_file"
+
 
 
 
