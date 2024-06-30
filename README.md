@@ -28,10 +28,8 @@ This script (`script.sh`) checks whether a given input string is a palindrome. I
    ```bash
    git clone https://github.com/osll1/Linux.git
    cd Linux
-1. # Run the Script:
+2. # Run the Script:
 
-bash
-Copy code
 bash script.sh <input_string>
 Replace <input_string> with the string you want to check.
 
