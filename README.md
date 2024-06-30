@@ -37,7 +37,7 @@ Replace <input_string> with the string you want to check.
 
 ### Examples
 
-**valid-input-palindrome**
+### valid-input-palindrome
 # Examples 1
 Valid Input (Palindrome)
 bash script.sh "madam"
@@ -46,7 +46,7 @@ bash script.sh "madam"
 The string 'madam' is a palindrome.
 
 # Examples 2
-**invalid-input-numeric**
+### invalid-input-numeric
 Invalid Input (Numeric)
 bash script.sh "12321"
 
