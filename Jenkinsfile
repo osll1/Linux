@@ -19,7 +19,7 @@ pipeline {
         stage('Run Shell Script') {
             steps {
                 script {
-                    def output = sh(script: "bash palindrome_check.sh '${params.user_input}'", returnStdout: true).trim()
+                    def output = sh(script: "bash script.sh '${params.user_input}'", returnStdout: true).trim()
                     echo output // This line outputs the result to the Jenkins console
                 }
             }
