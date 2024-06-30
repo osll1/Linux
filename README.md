@@ -5,11 +5,11 @@ This script (`script.sh`) checks whether a given input string is a palindrome. I
 ## Table of Contents
 
 - [Usage](#usage)
-  - [Requirements](#requirements)
-  - [Instructions](#instructions)
+- [Requirements](#requirements)
+- [Instructions](#instructions)
 - [Examples](#examples)
-  - [Valid Input](#valid-input-palindrome)
-  - [Invalid Input](#invalid-input-numeric)
+- [Valid Input](#valid-input-palindrome)
+- [Invalid Input](#invalid-input-numeric)
 - [Script Details](#script-details)
 
 ---
@@ -28,35 +28,30 @@ This script (`script.sh`) checks whether a given input string is a palindrome. I
    ```bash
    git clone https://github.com/osll1/Linux.git
    cd Linux
-Run the Script:
+1. # Run the Script:
 
 bash
 Copy code
 bash script.sh <input_string>
 Replace <input_string> with the string you want to check.
 
-Examples
+# Examples 1
 Valid Input (Palindrome)
-bash
-Copy code
 bash script.sh "madam"
-Output:
 
-csharp
-Copy code
+# Output:
 The string 'madam' is a palindrome.
+
+# Examples 2
 Invalid Input (Numeric)
-bash
-Copy code
 bash script.sh "12321"
-Output:
 
-lua
-Copy code
+# Output:
 Error: Numeric input detected. Please enter a string.
-Script Details
-The script.sh script:
 
+
+ # Script Details
+The script.sh script:
 Accepts a string input from the command line.
 Checks if the input is empty or numeric.
 Determines if the input string reads the same forwards and backwards (a palindrome).
