@@ -1,52 +1,42 @@
 #!/bin/bash
 
-# Function to check if a number is a perfect square
-is_perfect_square() {
-    n=$1
-    sqrt=$(echo "sqrt($n)" | bc)
-    squared=$((sqrt * sqrt))
-
-    [ $squared -eq $n ]
-}
-
-# Function to check if a number is a Fibonacci number and find its index
-is_fibonacci() {
-    num=$1
-
-    # Calculate two possible values that indicate Fibonacci numbers
-    option1=$((5 * num * num + 4))
-    option2=$((5 * num * num - 4))
-
-    # Check if either of the calculated values is a perfect square
-    if (is_perfect_square $option1) || (is_perfect_square $option2); then
-        echo "$num is a Fibonacci number."
-
-        # Find the index of the Fibonacci number
-        a=0
-        b=1
-        index=0
-
-        # Iterate through Fibonacci numbers until a match is found
-        while [ $a -ne $num ]; do
-            temp=$a
-            a=$b
-            b=$((temp + b))
-            index=$((index + 1))
-        done
-
-        echo "$num is at index $index in the Fibonacci."
+# Function to check if a string is a palindrome
+is_palindrome() {
+    local input="$1"
+    local reversed_input=$(echo "$input" | rev)
+    if [[ "$input" == "$reversed_input" ]]; then
+        echo "true"
     else
-        echo "$num is not a Fibonacci number."
+        echo "false"
     fi
 }
 
-# Prompt the user to enter a number
-user_input=$1
+# Input string (you can modify this part to accept input from Jenkins parameters)
+input_string="madam"
 
-# Check if the input is a positive integer
-if [[ $user_input =~ ^[0-9]+$ ]]; then
-    # Call the is_fibonacci function with the user input
-    is_fibonacci $user_input
-else
-    echo "Invalid input. Please enter a positive integer."
-fi
+# Check if the string is a palindrome
+result=$(is_palindrome "$input_string")
+
+# Generate HTML content
+html_content="
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Palindrome Check Result</title>
+</head>
+<body>
+    <h1>Palindrome Check Result</h1>
+    <p>Input String: <strong>$input_string</strong></p>
+    <p>Is Palindrome: <strong>$result</strong></p>
+</body>
+</html>
+"
+
+# Output the HTML content to a file
+output_file="palindrome_result.html"
+echo "$html_content" > "$output_file"
+
+# Print the location of the generated HTML file
+echo "HTML file generated: $output_file"
