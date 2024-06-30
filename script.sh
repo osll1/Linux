@@ -47,9 +47,6 @@ html_content="
 output_file="palindrome_result.html"
 echo "$html_content" > "$output_file"
 
-# Print the location of the generated HTML file
-echo "HTML file generated: $output_file"
-
 
 
 
