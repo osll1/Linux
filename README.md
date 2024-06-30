@@ -54,7 +54,7 @@ bash script.sh "12321"
 Error: Numeric input detected. Please enter a string.
 
 
-**Script Details**
+### Script Details
 The script.sh script:
 Accepts a string input from the command line.
 Checks if the input is empty or numeric.
