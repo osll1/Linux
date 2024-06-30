@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Function to check if a string is a palindrome
@@ -20,10 +19,13 @@ result=$(is_palindrome "$input_string")
 
 # Generate the appropriate message
 if [[ "$result" == "true" ]]; then
-    message="The string '<strong>$input_string</strong>' is a palindrome."
+    message="The string '$input_string' is a palindrome."
 else
-    message="The string '<strong>$input_string</strong>' is not a palindrome."
+    message="The string '$input_string' is not a palindrome."
 fi
+
+# Output the result to the Jenkins console
+echo "$message"
 
 # Generate HTML content
 html_content="
@@ -47,6 +49,7 @@ echo "$html_content" > "$output_file"
 
 # Print the location of the generated HTML file
 echo "HTML file generated: $output_file"
+
 
 
 
